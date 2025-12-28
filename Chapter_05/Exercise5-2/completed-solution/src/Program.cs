@@ -17,7 +17,7 @@ builder.Services.AddMcpServer()
     .WithTools<MultiplicationTool>()
     .WithTools<TemperatureConverterTool>()
     .WithTools<WeatherTools>()
-    .WithTools<SqlCrudTools>()
+    .WithTools<DBTools>()
     .WithTools<EntraDirectoryTools>();
 
 // Add CORS for HTTP transport support in browsers

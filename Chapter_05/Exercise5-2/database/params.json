@@ -1,0 +1,23 @@
+{
+    "resourceGroupName": {
+    "value": "rg-deleteme"
+  },
+  "sqlServerName": {
+    "value": "js-sql-testdb"
+  },
+  "aadAdminObjectId": {
+    "value": "f03416e3-5b38-4a67-9b68-c3a567f84e9b"
+  },
+  "aadAdminDisplayName": {
+    "value": "My Entra Admin"
+  },
+  "tenantId": {
+    "value": "316f8652-813e-4f91-95b7-2b011ba15f29"
+  },
+  "location": {
+    "value": "westus2"
+  },
+  "clientIp": {
+    "value": "73.109.120.9"
+  }
+}
