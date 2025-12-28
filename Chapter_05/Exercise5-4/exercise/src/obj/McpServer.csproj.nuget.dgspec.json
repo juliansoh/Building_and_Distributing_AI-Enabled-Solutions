@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-3/completed-solution/src/McpServer.csproj": {}
+    "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-4/exercise/src/McpServer.csproj": {}
   },
   "projects": {
-    "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-3/completed-solution/src/McpServer.csproj": {
+    "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-4/exercise/src/McpServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-3/completed-solution/src/McpServer.csproj",
+        "projectUniqueName": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-4/exercise/src/McpServer.csproj",
         "projectName": "McpServer",
-        "projectPath": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-3/completed-solution/src/McpServer.csproj",
+        "projectPath": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-4/exercise/src/McpServer.csproj",
         "packagesPath": "/Users/juliansoh/.nuget/packages/",
-        "outputPath": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-3/completed-solution/src/obj/",
+        "outputPath": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-4/exercise/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/juliansoh/.nuget/NuGet/NuGet.Config"

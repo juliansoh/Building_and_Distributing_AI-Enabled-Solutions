@@ -1,2 +1,2 @@
 # Building_and_Distributing_AI-Enabled-Solutions
-ISV book through Apress
+Hands-on exercises for forthcomg book (Apress) - January/February 2026

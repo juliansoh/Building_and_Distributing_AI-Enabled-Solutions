@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5f9Ko2OqC3E=",
+  "dgSpecHash": "u7Mnw4nxYY4=",
   "success": true,
-  "projectFilePath": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-3/completed-solution/src/McpServer.csproj",
+  "projectFilePath": "/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_05/Exercise5-4/exercise/src/McpServer.csproj",
   "expectedPackageFiles": [
     "/Users/juliansoh/.nuget/packages/azure.core/1.50.0/azure.core.1.50.0.nupkg.sha512",
     "/Users/juliansoh/.nuget/packages/azure.identity/1.17.1/azure.identity.1.17.1.nupkg.sha512",

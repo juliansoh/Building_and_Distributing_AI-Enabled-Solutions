@@ -3,7 +3,7 @@ param resourceToken string
 param tags object
 
 @description('The SKU of App Service Plan.')
-param sku string = 'F1'
+param sku string = 'B1'
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: 'plan-${resourceToken}'

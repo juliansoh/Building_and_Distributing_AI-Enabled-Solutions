@@ -1,7 +1,7 @@
 {
 	"servers": {
-		"my-mcp-server-04263c72": {
-			"url": "http://localhost:5000",
+		"my-mcp-server-38e15785": {
+			"url": "https://app-sk7fpn4bic3xm.azurewebsites.net/",
 			"type": "http"
 		}
 	},
