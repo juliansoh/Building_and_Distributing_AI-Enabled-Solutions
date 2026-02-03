@@ -28,7 +28,7 @@ namespace WeatherApp
         static async Task Main(string[] args)
         {
             AIAgent agent = new AzureOpenAIClient(
-                new Uri("https://js-aoai-east2.openai.azure.com/"),
+                new Uri("<Enter your Azure OpenAI endpoint here>"),
                 new AzureCliCredential())
                    .GetChatClient("gpt-4o-mini")
                     .AsIChatClient()

@@ -14,7 +14,7 @@ AIAgent agent = new AzureOpenAIClient(
     .CreateAIAgent(instructions: "You are an expert in explaining technologies in simple English");
 
 //Exercise 6.1.1 - Simple Agent
-//Console.WriteLine(await agent.RunAsync("Tell me about Model Context Protocol."));
+Console.WriteLine(await agent.RunAsync("Tell me about Model Context Protocol."));
 
 //Exercise 6.1.2 - Simple Agent with Streaming
 //int count = 0;

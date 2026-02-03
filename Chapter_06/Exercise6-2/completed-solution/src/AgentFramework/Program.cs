@@ -5,7 +5,7 @@ using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
 
 AIAgent agent = new AzureOpenAIClient(
-    new Uri("https://js-aoai-east2.openai.azure.com/"),
+    new Uri("<Enter your Azure OpenAI endpoint URI here>"),
     new AzureCliCredential())
         .GetChatClient("gpt-4o-mini")
         .AsIChatClient()

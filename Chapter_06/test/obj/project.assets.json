@@ -55,14 +55,14 @@
           }
         }
       },
-      "Microsoft.Agents.AI/1.0.0-preview.251219.1": {
+      "Microsoft.Agents.AI/1.0.0-preview.260121.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Agents.AI.Abstractions": "1.0.0-preview.251219.1",
-          "Microsoft.Extensions.AI": "10.1.1",
-          "Microsoft.Extensions.AI.Abstractions": "10.1.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.1",
+          "Microsoft.Agents.AI.Abstractions": "1.0.0-preview.260121.1",
+          "Microsoft.Extensions.AI": "10.2.0",
+          "Microsoft.Extensions.AI.Abstractions": "10.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.2",
           "Microsoft.Extensions.VectorData.Abstractions": "9.7.0"
         },
         "compile": {
@@ -76,12 +76,12 @@
           }
         }
       },
-      "Microsoft.Agents.AI.Abstractions/1.0.0-preview.251219.1": {
+      "Microsoft.Agents.AI.Abstractions/1.0.0-preview.260121.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.1.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.1"
+          "Microsoft.Extensions.AI.Abstractions": "10.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.2"
         },
         "compile": {
           "lib/net10.0/Microsoft.Agents.AI.Abstractions.dll": {
@@ -118,6 +118,29 @@
           }
         }
       },
+      "Microsoft.Agents.AI.Workflows/1.0.0-preview.260121.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Agents.AI": "1.0.0-preview.260121.1",
+          "Microsoft.Agents.AI.Abstractions": "1.0.0-preview.260121.1",
+          "Microsoft.Extensions.AI": "10.2.0",
+          "Microsoft.Extensions.AI.Abstractions": "10.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.2",
+          "Microsoft.Extensions.VectorData.Abstractions": "9.7.0",
+          "OpenTelemetry.Api": "1.13.1"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.Agents.AI.Workflows.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Agents.AI.Workflows.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "compile": {
@@ -131,14 +154,14 @@
           }
         }
       },
-      "Microsoft.Extensions.AI/10.1.1": {
+      "Microsoft.Extensions.AI/10.2.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "10.1.1",
-          "Microsoft.Extensions.Caching.Abstractions": "10.0.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.1",
-          "System.Numerics.Tensors": "10.0.1"
+          "Microsoft.Extensions.AI.Abstractions": "10.2.0",
+          "Microsoft.Extensions.Caching.Abstractions": "10.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.2",
+          "System.Numerics.Tensors": "10.0.2"
         },
         "compile": {
           "lib/net10.0/Microsoft.Extensions.AI.dll": {
@@ -151,7 +174,7 @@
           }
         }
       },
-      "Microsoft.Extensions.AI.Abstractions/10.1.1": {
+      "Microsoft.Extensions.AI.Abstractions/10.2.0": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll": {
@@ -181,10 +204,10 @@
           }
         }
       },
-      "Microsoft.Extensions.Caching.Abstractions/10.0.1": {
+      "Microsoft.Extensions.Caching.Abstractions/10.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "10.0.1"
+          "Microsoft.Extensions.Primitives": "10.0.2"
         },
         "compile": {
           "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.dll": {
@@ -200,7 +223,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.1": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.2": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -216,10 +239,10 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/10.0.1": {
+      "Microsoft.Extensions.Logging.Abstractions/10.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2"
         },
         "compile": {
           "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
@@ -235,7 +258,7 @@
           "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
       },
-      "Microsoft.Extensions.Primitives/10.0.1": {
+      "Microsoft.Extensions.Primitives/10.0.2": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.Extensions.Primitives.dll": {
@@ -329,6 +352,19 @@
           }
         }
       },
+      "OpenTelemetry.Api/1.13.1": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/OpenTelemetry.Api.dll": {
+            "related": ".dll-keyless.pem;.dll-keyless.sig;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/OpenTelemetry.Api.dll": {
+            "related": ".dll-keyless.pem;.dll-keyless.sig;.xml"
+          }
+        }
+      },
       "System.ClientModel/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -362,7 +398,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Numerics.Tensors/10.0.1": {
+      "System.Numerics.Tensors/10.0.2": {
         "type": "package",
         "compile": {
           "lib/net10.0/System.Numerics.Tensors.dll": {
@@ -458,10 +494,10 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Microsoft.Agents.AI/1.0.0-preview.251219.1": {
-      "sha512": "VR41foXFo8IhddTtX9DlzhgMYqzPsDh5yktgAz/pAWDeCqkXVFfUbdhiTAQevoBFPl/wSd3xKHjONZLT5CwcYw==",
+    "Microsoft.Agents.AI/1.0.0-preview.260121.1": {
+      "sha512": "9RGE+99cVdURN575cy0gUVdH01EUaNY1RQYFiA7uQOOR35ve/BvGowL/BzrKYAougNx8+zBjAtk/SEWDyEt5Pg==",
       "type": "package",
-      "path": "microsoft.agents.ai/1.0.0-preview.251219.1",
+      "path": "microsoft.agents.ai/1.0.0-preview.260121.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -477,14 +513,14 @@
         "lib/net9.0/Microsoft.Agents.AI.xml",
         "lib/netstandard2.0/Microsoft.Agents.AI.dll",
         "lib/netstandard2.0/Microsoft.Agents.AI.xml",
-        "microsoft.agents.ai.1.0.0-preview.251219.1.nupkg.sha512",
+        "microsoft.agents.ai.1.0.0-preview.260121.1.nupkg.sha512",
         "microsoft.agents.ai.nuspec"
       ]
     },
-    "Microsoft.Agents.AI.Abstractions/1.0.0-preview.251219.1": {
-      "sha512": "IMBHguYJDhiY1NMCGUk2TDffG4VJ8iGDrPxcjqCQcEBFRwSyEJcJYbmiGlnJxNkp94u22uEOJfJeoq2U+wbS4A==",
+    "Microsoft.Agents.AI.Abstractions/1.0.0-preview.260121.1": {
+      "sha512": "Jjm/q1Q9Ktxid49BR/uxqlLuDQ1ICLyM9CZd/jB2rJF2+Xr9ugapbhIuZ2QfJ+f5Y+m1ZkpNw9iyyuPC7RUTmQ==",
       "type": "package",
-      "path": "microsoft.agents.ai.abstractions/1.0.0-preview.251219.1",
+      "path": "microsoft.agents.ai.abstractions/1.0.0-preview.260121.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -500,7 +536,7 @@
         "lib/net9.0/Microsoft.Agents.AI.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Agents.AI.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Agents.AI.Abstractions.xml",
-        "microsoft.agents.ai.abstractions.1.0.0-preview.251219.1.nupkg.sha512",
+        "microsoft.agents.ai.abstractions.1.0.0-preview.260121.1.nupkg.sha512",
         "microsoft.agents.ai.abstractions.nuspec"
       ]
     },
@@ -527,6 +563,29 @@
         "microsoft.agents.ai.openai.nuspec"
       ]
     },
+    "Microsoft.Agents.AI.Workflows/1.0.0-preview.260121.1": {
+      "sha512": "OPh1iKG3bLFo3O9WR5P6PRf9JYBOTy1NNsSciDuEh15xN7zY9SftvnCDtWLL9RDvvJEEYGB3+QMM9p0xhcPtug==",
+      "type": "package",
+      "path": "microsoft.agents.ai.workflows/1.0.0-preview.260121.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NUGET.md",
+        "icon.png",
+        "lib/net10.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net10.0/Microsoft.Agents.AI.Workflows.xml",
+        "lib/net472/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net472/Microsoft.Agents.AI.Workflows.xml",
+        "lib/net8.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net8.0/Microsoft.Agents.AI.Workflows.xml",
+        "lib/net9.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net9.0/Microsoft.Agents.AI.Workflows.xml",
+        "lib/netstandard2.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/netstandard2.0/Microsoft.Agents.AI.Workflows.xml",
+        "microsoft.agents.ai.workflows.1.0.0-preview.260121.1.nupkg.sha512",
+        "microsoft.agents.ai.workflows.nuspec"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
       "sha512": "3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
       "type": "package",
@@ -551,10 +610,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.AI/10.1.1": {
-      "sha512": "hc2OOFz4edXXWOoNLyMaCAdZvyT9vENKSZKqi8q2meDagPr3iMDVXuQlYf0gnCGBIpGvXwx7Aq9feeLMZewh6g==",
+    "Microsoft.Extensions.AI/10.2.0": {
+      "sha512": "hKLdKfwzwQ30Z5hA1DwHFvJJtRuyPmf41Es6t8DXW4PE/6caWK4qSDRY3i+QYmYbIVXnPlVR5xXQjYNz07giNg==",
       "type": "package",
-      "path": "microsoft.extensions.ai/10.1.1",
+      "path": "microsoft.extensions.ai/10.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -570,14 +629,14 @@
         "lib/net9.0/Microsoft.Extensions.AI.xml",
         "lib/netstandard2.0/Microsoft.Extensions.AI.dll",
         "lib/netstandard2.0/Microsoft.Extensions.AI.xml",
-        "microsoft.extensions.ai.10.1.1.nupkg.sha512",
+        "microsoft.extensions.ai.10.2.0.nupkg.sha512",
         "microsoft.extensions.ai.nuspec"
       ]
     },
-    "Microsoft.Extensions.AI.Abstractions/10.1.1": {
-      "sha512": "cgj8iHv4JwUpcPANZ0oLILz146Y1Oa+l280b1c1a3DjwZflH9nmYcrX952YUuqftz2sheAC2TPCGcEa6unKQgQ==",
+    "Microsoft.Extensions.AI.Abstractions/10.2.0": {
+      "sha512": "ONGlIBht0ygEdKc0bCt9XWUiq19/460dAu7fCKzPM34OFJSMQIohEDTJwjCJ8vVp8znNakloc9xFF9+R/eDCYQ==",
       "type": "package",
-      "path": "microsoft.extensions.ai.abstractions/10.1.1",
+      "path": "microsoft.extensions.ai.abstractions/10.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -593,7 +652,7 @@
         "lib/net9.0/Microsoft.Extensions.AI.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.AI.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.AI.Abstractions.xml",
-        "microsoft.extensions.ai.abstractions.10.1.1.nupkg.sha512",
+        "microsoft.extensions.ai.abstractions.10.2.0.nupkg.sha512",
         "microsoft.extensions.ai.abstractions.nuspec"
       ]
     },
@@ -620,10 +679,10 @@
         "microsoft.extensions.ai.openai.nuspec"
       ]
     },
-    "Microsoft.Extensions.Caching.Abstractions/10.0.1": {
-      "sha512": "Vb1vVAQDxHpXVdL9fpOX2BzeV7bbhzG4pAcIKRauRl0/VfkE8mq0f+fYC+gWICh3dlzTZInJ/cTeBS2MgU/XvQ==",
+    "Microsoft.Extensions.Caching.Abstractions/10.0.2": {
+      "sha512": "WIRPDa/qoKHmJhTAPCO/zLu9kRLQ2Fd6HD5tzgdXJ3xGEVXDHP6FvakKJjynwKrVDld8H4G4tcbW53wuC/wxMQ==",
       "type": "package",
-      "path": "microsoft.extensions.caching.abstractions/10.0.1",
+      "path": "microsoft.extensions.caching.abstractions/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -644,15 +703,15 @@
         "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
-        "microsoft.extensions.caching.abstractions.10.0.1.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.10.0.2.nupkg.sha512",
         "microsoft.extensions.caching.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.1": {
-      "sha512": "oIy8fQxxbUsSrrOvgBqlVgOeCtDmrcynnTG+FQufcUWBrwyPfwlUkCDB2vaiBeYPyT+20u9/HeuHeBf+H4F/8g==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.2": {
+      "sha512": "zOIurr59+kUf9vNcsUkCvKWZv+fPosUZXURZesYkJCvl0EzTc9F7maAO4Cd2WEV7ZJJ0AZrFQvuH6Npph9wdBw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.1",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -675,15 +734,15 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.10.0.2.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/10.0.1": {
-      "sha512": "YkmyiPIWAXVb+lPIrM0LE5bbtLOJkCiRTFiHpkVOvhI7uTvCfoOHLEN0LcsY56GpSD7NqX3gJNpsaDe87/B3zg==",
+    "Microsoft.Extensions.Logging.Abstractions/10.0.2": {
+      "sha512": "RZkez/JjpnO+MZ6efKkSynN6ZztLpw3WbxNzjLCPBd97wWj1S9ZYPWi0nmT4kWBRa6atHsdM1ydGkUr8GudyDQ==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/10.0.1",
+      "path": "microsoft.extensions.logging.abstractions/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -747,15 +806,15 @@
         "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.10.0.1.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.10.0.2.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Primitives/10.0.1": {
-      "sha512": "DO8XrJkp5x4PddDuc/CH37yDBCs9BYN6ijlKyR3vMb55BP1Vwh90vOX8bNfnKxr5B2qEI3D8bvbY1fFbDveDHQ==",
+    "Microsoft.Extensions.Primitives/10.0.2": {
+      "sha512": "QmSiO+oLBEooGgB3i0GRXyeYRDHjllqt3k365jwfZlYWhvSHA3UL2NEVV5m8aZa041eIlblo6KMI5txvTMpTwA==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/10.0.1",
+      "path": "microsoft.extensions.primitives/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -776,7 +835,7 @@
         "lib/net9.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.10.0.1.nupkg.sha512",
+        "microsoft.extensions.primitives.10.0.2.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -885,6 +944,37 @@
         "openai.nuspec"
       ]
     },
+    "OpenTelemetry.Api/1.13.1": {
+      "sha512": "tieglRERo7Rgu8oE8aamnuXCMPEW5fXIqO5ngTMCNk9pOEXanc0SdQ86ZAD1goNiGcjWHn+P3WMZp0FZSJgCoQ==",
+      "type": "package",
+      "path": "opentelemetry.api/1.13.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Api.dll",
+        "lib/net462/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/net462/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/net462/OpenTelemetry.Api.xml",
+        "lib/net8.0/OpenTelemetry.Api.dll",
+        "lib/net8.0/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/net8.0/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/net8.0/OpenTelemetry.Api.xml",
+        "lib/net9.0/OpenTelemetry.Api.dll",
+        "lib/net9.0/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/net9.0/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/net9.0/OpenTelemetry.Api.xml",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/netstandard2.0/OpenTelemetry.Api.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.api.1.13.1.nupkg.sha512",
+        "opentelemetry.api.nuspec"
+      ]
+    },
     "System.ClientModel/1.8.1": {
       "sha512": "4oUQgw/vaO4FBOk3YsH40hbrjxRED1l95rRLvTMtHXfQxapXya9IfPpm/KgwValFFtYTfYGFOs/qzGmGyexicQ==",
       "type": "package",
@@ -936,10 +1026,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Numerics.Tensors/10.0.1": {
-      "sha512": "1ERX7TgHGP8Cs3sHWp0Vk6kg9xVQSgLsumb5qw1KNiClUC5cs4lKZ1LzPHI/ZYY3at7EX2nx4uWU6SGSi2V8Kg==",
+    "System.Numerics.Tensors/10.0.2": {
+      "sha512": "EzimXy5WX7RJxf1pHBfolBApA4GR7qje1cY9XofD4C+cQepx0a5ZVlZjde8NHk+W1+6kltrbbfa8LIOVpTM6yQ==",
       "type": "package",
-      "path": "system.numerics.tensors/10.0.1",
+      "path": "system.numerics.tensors/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -960,7 +1050,7 @@
         "lib/net9.0/System.Numerics.Tensors.xml",
         "lib/netstandard2.0/System.Numerics.Tensors.dll",
         "lib/netstandard2.0/System.Numerics.Tensors.xml",
-        "system.numerics.tensors.10.0.1.nupkg.sha512",
+        "system.numerics.tensors.10.0.2.nupkg.sha512",
         "system.numerics.tensors.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1011,7 +1101,9 @@
     "net10.0": [
       "Azure.AI.OpenAI >= 2.8.0-beta.1",
       "Azure.Identity >= 1.17.1",
-      "Microsoft.Agents.AI.OpenAI >= 1.0.0-preview.251219.1"
+      "Microsoft.Agents.AI >= 1.0.0-preview.260121.1",
+      "Microsoft.Agents.AI.OpenAI >= 1.0.0-preview.251219.1",
+      "Microsoft.Agents.AI.Workflows >= 1.0.0-preview.260121.1"
     ]
   },
   "packageFolders": {
@@ -1065,9 +1157,17 @@
             "target": "Package",
             "version": "[1.17.1, )"
           },
+          "Microsoft.Agents.AI": {
+            "target": "Package",
+            "version": "[1.0.0-preview.260121.1, )"
+          },
           "Microsoft.Agents.AI.OpenAI": {
             "target": "Package",
             "version": "[1.0.0-preview.251219.1, )"
+          },
+          "Microsoft.Agents.AI.Workflows": {
+            "target": "Package",
+            "version": "[1.0.0-preview.260121.1, )"
           }
         },
         "imports": [

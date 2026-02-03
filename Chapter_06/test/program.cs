@@ -5,82 +5,58 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
-using System;
-using System.Threading.Tasks;
 using System.ComponentModel;
 using Azure.AI.OpenAI;
 using Azure.Identity;
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
+using Microsoft.Agents.AI.Workflows;
 
-namespace WeatherApp
+
+// Set up the Azure OpenAI client
+var endpoint = Environment.GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT") ??
+    "https://js-aoai-east2.openai.azure.com/";
+var deploymentName = Environment.GetEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT_NAME") ?? "gpt-4o-mini";
+var client = new AzureOpenAIClient(new Uri(endpoint), new AzureCliCredential())
+    .GetChatClient(deploymentName)
+    .AsIChatClient();
+
+// 2) Helper method to create translation agents
+static ChatClientAgent GetTranslationAgent(string targetLanguage, IChatClient chatClient) =>
+    new(chatClient,
+        $"You are a translation assistant who only responds in {targetLanguage}. Respond to any " +
+        $"input by outputting the name of the input language and then translating the input to {targetLanguage}.");
+
+// Create translation agents for concurrent processing
+var translationAgents = (from lang in (string[])["French", "Spanish", "English"]
+                         select GetTranslationAgent(lang, client));
+
+// 3) Build concurrent workflow
+var workflow = AgentWorkflowBuilder.BuildConcurrent(translationAgents);
+
+// 4) Run the workflow
+var messages = new List<ChatMessage> { new(ChatRole.User, "Hello, world!") };
+
+StreamingRun run = await InProcessExecution.StreamAsync(workflow, messages);
+await run.TrySendMessageAsync(new TurnToken(emitEvents: true));
+
+List<ChatMessage> result = new();
+await foreach (WorkflowEvent evt in run.WatchStreamAsync().ConfigureAwait(false))
 {
-    class Program
+    if (evt is AgentResponseUpdateEvent e)
     {
-        [Description("Get the weather for a given location.")]
-        static async Task<string> GetWeather([Description("Latitude of the location")] double latitude, [Description("Longitude of the location")] double longitude)
-        {
-            var service = new WeatherService();
-            var weather = await service.GetWeatherAsync(latitude, longitude);
-            return $"Weather for {weather.Name}: {weather.Temperature}°{weather.TemperatureUnit}, {weather.DetailedForecast}";
-        }
-
-        static async Task Main(string[] args)
-        {
-            AIAgent agent = new AzureOpenAIClient(
-                new Uri("https://js-aoai-east2.openai.azure.com/"),
-                new AzureCliCredential())
-                   .GetChatClient("gpt-4o-mini")
-                    .AsIChatClient()
-                    .CreateAIAgent(
-                        instructions: "You are an expert in explaining technologies in simple English", tools: [AIFunctionFactory.Create(GetWeather)]
-                    );
-
-            //Create a conversation thread
-            AgentThread thread = agent.GetNewThread();
-
-            Console.WriteLine("Starting conversation. Type 'end' to exit.");
-            Console.WriteLine();
-
-            //Conversation loop
-            while (true)
-            {
-                Console.Write("You: ");
-                string? userInput = Console.ReadLine();
-
-                if (string.IsNullOrWhiteSpace(userInput))
-                    continue;
-
-                if (userInput.Trim().Equals("end", StringComparison.OrdinalIgnoreCase))
-                {
-                    Console.WriteLine("Conversation ended.");
-                    break;
-                }
-
-                // Send user input to the agent within the same thread
-                string response = (await agent.RunAsync(userInput, thread)).ToString();
-
-                Console.WriteLine();
-                Console.WriteLine("Agent:");
-                Console.WriteLine(response);
-                Console.WriteLine();
-            }
-            /*
-            Console.Write("Enter latitude: ");
-            double latitude = double.Parse(Console.ReadLine());
-
-            Console.Write("Enter longitude: ");
-            double longitude = double.Parse(Console.ReadLine());
-
-            var service = new WeatherService();
-            var weather = await service.GetWeatherAsync(latitude, longitude);
-
-            Console.WriteLine("\n--- Weather Report ---");
-            Console.WriteLine($"Location: {weather.Name}");
-            Console.WriteLine($"Temperature: {weather.Temperature} {weather.TemperatureUnit}");
-            Console.WriteLine($"Wind: {weather.WindSpeed} {weather.WindDirection}");
-            Console.WriteLine($"Forecast: {weather.DetailedForecast}");
-            */
-        }
+        Console.WriteLine($"{e.ExecutorId}: {e.Data}");
     }
+    else if (evt is WorkflowOutputEvent outputEvt)
+    {
+        result = (List<ChatMessage>)outputEvt.Data!;
+        break;
+    }
+}
+
+// Display aggregated results from all agents
+Console.WriteLine("===== Final Aggregated Results =====");
+foreach (var message in result)
+{
+    Console.WriteLine($"{message.Role}: {message.Text}");
 }

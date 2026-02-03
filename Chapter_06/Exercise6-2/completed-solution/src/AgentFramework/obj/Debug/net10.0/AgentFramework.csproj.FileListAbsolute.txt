@@ -80,3 +80,5 @@
 /Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_06/Exercise6-2/completed-solution/src/AgentFramework/obj/Debug/net10.0/AgentFramework.pdb
 /Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_06/Exercise6-2/completed-solution/src/AgentFramework/obj/Debug/net10.0/AgentFramework.genruntimeconfig.cache
 /Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_06/Exercise6-2/completed-solution/src/AgentFramework/obj/Debug/net10.0/ref/AgentFramework.dll
+/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_06/Exercise6-2/completed-solution/src/AgentFramework/bin/Debug/net10.0/Microsoft.Agents.AI.Workflows.dll
+/Users/juliansoh/Documents/dev/Building_and_Distributing_AI-Enabled-Solutions/Chapter_06/Exercise6-2/completed-solution/src/AgentFramework/bin/Debug/net10.0/OpenTelemetry.Api.dll

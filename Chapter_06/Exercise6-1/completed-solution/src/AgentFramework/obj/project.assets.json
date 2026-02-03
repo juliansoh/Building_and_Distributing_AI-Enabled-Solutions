@@ -55,10 +55,10 @@
           }
         }
       },
-      "Microsoft.Agents.AI/1.0.0-preview.251219.1": {
+      "Microsoft.Agents.AI/1.0.0-preview.260108.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Agents.AI.Abstractions": "1.0.0-preview.251219.1",
+          "Microsoft.Agents.AI.Abstractions": "1.0.0-preview.260108.1",
           "Microsoft.Extensions.AI": "10.1.1",
           "Microsoft.Extensions.AI.Abstractions": "10.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1",
@@ -76,7 +76,7 @@
           }
         }
       },
-      "Microsoft.Agents.AI.Abstractions/1.0.0-preview.251219.1": {
+      "Microsoft.Agents.AI.Abstractions/1.0.0-preview.260108.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.AI.Abstractions": "10.1.1",
@@ -114,6 +114,29 @@
         },
         "runtime": {
           "lib/net10.0/Microsoft.Agents.AI.OpenAI.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Agents.AI.Workflows/1.0.0-preview.260108.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Agents.AI": "1.0.0-preview.260108.1",
+          "Microsoft.Agents.AI.Abstractions": "1.0.0-preview.260108.1",
+          "Microsoft.Extensions.AI": "10.1.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.1",
+          "Microsoft.Extensions.VectorData.Abstractions": "9.7.0",
+          "OpenTelemetry.Api": "1.13.1"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.Agents.AI.Workflows.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Agents.AI.Workflows.dll": {
             "related": ".xml"
           }
         }
@@ -329,6 +352,19 @@
           }
         }
       },
+      "OpenTelemetry.Api/1.13.1": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/OpenTelemetry.Api.dll": {
+            "related": ".dll-keyless.pem;.dll-keyless.sig;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/OpenTelemetry.Api.dll": {
+            "related": ".dll-keyless.pem;.dll-keyless.sig;.xml"
+          }
+        }
+      },
       "System.ClientModel/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -458,10 +494,10 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Microsoft.Agents.AI/1.0.0-preview.251219.1": {
-      "sha512": "VR41foXFo8IhddTtX9DlzhgMYqzPsDh5yktgAz/pAWDeCqkXVFfUbdhiTAQevoBFPl/wSd3xKHjONZLT5CwcYw==",
+    "Microsoft.Agents.AI/1.0.0-preview.260108.1": {
+      "sha512": "Bz6xDOeESBsa0umOIJGVmhvFi7XCm8SMwaKdrF1IFIPmIqMngQPqFWDk3gb2ZLTnqcdsVRzhy/7rSQyM4Z6NYQ==",
       "type": "package",
-      "path": "microsoft.agents.ai/1.0.0-preview.251219.1",
+      "path": "microsoft.agents.ai/1.0.0-preview.260108.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -477,14 +513,14 @@
         "lib/net9.0/Microsoft.Agents.AI.xml",
         "lib/netstandard2.0/Microsoft.Agents.AI.dll",
         "lib/netstandard2.0/Microsoft.Agents.AI.xml",
-        "microsoft.agents.ai.1.0.0-preview.251219.1.nupkg.sha512",
+        "microsoft.agents.ai.1.0.0-preview.260108.1.nupkg.sha512",
         "microsoft.agents.ai.nuspec"
       ]
     },
-    "Microsoft.Agents.AI.Abstractions/1.0.0-preview.251219.1": {
-      "sha512": "IMBHguYJDhiY1NMCGUk2TDffG4VJ8iGDrPxcjqCQcEBFRwSyEJcJYbmiGlnJxNkp94u22uEOJfJeoq2U+wbS4A==",
+    "Microsoft.Agents.AI.Abstractions/1.0.0-preview.260108.1": {
+      "sha512": "32IKLO9F7Yir3c9/kG+UMBssWGuhJb6dPnwEy4fYutdYPjTMA4MHX4TLSLdxZRCw5fhIP6qYWrG1Wbz0F7iC5w==",
       "type": "package",
-      "path": "microsoft.agents.ai.abstractions/1.0.0-preview.251219.1",
+      "path": "microsoft.agents.ai.abstractions/1.0.0-preview.260108.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -500,7 +536,7 @@
         "lib/net9.0/Microsoft.Agents.AI.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Agents.AI.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Agents.AI.Abstractions.xml",
-        "microsoft.agents.ai.abstractions.1.0.0-preview.251219.1.nupkg.sha512",
+        "microsoft.agents.ai.abstractions.1.0.0-preview.260108.1.nupkg.sha512",
         "microsoft.agents.ai.abstractions.nuspec"
       ]
     },
@@ -525,6 +561,29 @@
         "lib/netstandard2.0/Microsoft.Agents.AI.OpenAI.xml",
         "microsoft.agents.ai.openai.1.0.0-preview.251219.1.nupkg.sha512",
         "microsoft.agents.ai.openai.nuspec"
+      ]
+    },
+    "Microsoft.Agents.AI.Workflows/1.0.0-preview.260108.1": {
+      "sha512": "vqa4QdaZuymO805of77sbitYI4P/5EYc2jMEPRWzaVA1VNvU0KdUweYphhp6n8tOZB5wUwR4ASvJxRPhTGcQkw==",
+      "type": "package",
+      "path": "microsoft.agents.ai.workflows/1.0.0-preview.260108.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NUGET.md",
+        "icon.png",
+        "lib/net10.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net10.0/Microsoft.Agents.AI.Workflows.xml",
+        "lib/net472/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net472/Microsoft.Agents.AI.Workflows.xml",
+        "lib/net8.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net8.0/Microsoft.Agents.AI.Workflows.xml",
+        "lib/net9.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/net9.0/Microsoft.Agents.AI.Workflows.xml",
+        "lib/netstandard2.0/Microsoft.Agents.AI.Workflows.dll",
+        "lib/netstandard2.0/Microsoft.Agents.AI.Workflows.xml",
+        "microsoft.agents.ai.workflows.1.0.0-preview.260108.1.nupkg.sha512",
+        "microsoft.agents.ai.workflows.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -885,6 +944,37 @@
         "openai.nuspec"
       ]
     },
+    "OpenTelemetry.Api/1.13.1": {
+      "sha512": "tieglRERo7Rgu8oE8aamnuXCMPEW5fXIqO5ngTMCNk9pOEXanc0SdQ86ZAD1goNiGcjWHn+P3WMZp0FZSJgCoQ==",
+      "type": "package",
+      "path": "opentelemetry.api/1.13.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/OpenTelemetry.Api.dll",
+        "lib/net462/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/net462/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/net462/OpenTelemetry.Api.xml",
+        "lib/net8.0/OpenTelemetry.Api.dll",
+        "lib/net8.0/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/net8.0/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/net8.0/OpenTelemetry.Api.xml",
+        "lib/net9.0/OpenTelemetry.Api.dll",
+        "lib/net9.0/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/net9.0/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/net9.0/OpenTelemetry.Api.xml",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll-keyless.pem",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll-keyless.sig",
+        "lib/netstandard2.0/OpenTelemetry.Api.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.api.1.13.1.nupkg.sha512",
+        "opentelemetry.api.nuspec"
+      ]
+    },
     "System.ClientModel/1.8.1": {
       "sha512": "4oUQgw/vaO4FBOk3YsH40hbrjxRED1l95rRLvTMtHXfQxapXya9IfPpm/KgwValFFtYTfYGFOs/qzGmGyexicQ==",
       "type": "package",
@@ -1011,7 +1101,8 @@
     "net10.0": [
       "Azure.AI.OpenAI >= 2.8.0-beta.1",
       "Azure.Identity >= 1.17.1",
-      "Microsoft.Agents.Ai.OpenAI >= 1.0.0-preview.251219.1"
+      "Microsoft.Agents.AI.OpenAI >= 1.0.0-preview.251219.1",
+      "Microsoft.Agents.AI.Workflows >= 1.0.0-preview.260108.1"
     ]
   },
   "packageFolders": {
@@ -1065,9 +1156,13 @@
             "target": "Package",
             "version": "[1.17.1, )"
           },
-          "Microsoft.Agents.Ai.OpenAI": {
+          "Microsoft.Agents.AI.OpenAI": {
             "target": "Package",
             "version": "[1.0.0-preview.251219.1, )"
+          },
+          "Microsoft.Agents.AI.Workflows": {
+            "target": "Package",
+            "version": "[1.0.0-preview.260108.1, )"
           }
         },
         "imports": [

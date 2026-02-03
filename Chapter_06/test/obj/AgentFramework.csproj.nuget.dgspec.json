@@ -52,9 +52,17 @@
               "target": "Package",
               "version": "[1.17.1, )"
             },
+            "Microsoft.Agents.AI": {
+              "target": "Package",
+              "version": "[1.0.0-preview.260121.1, )"
+            },
             "Microsoft.Agents.AI.OpenAI": {
               "target": "Package",
               "version": "[1.0.0-preview.251219.1, )"
+            },
+            "Microsoft.Agents.AI.Workflows": {
+              "target": "Package",
+              "version": "[1.0.0-preview.260121.1, )"
             }
           },
           "imports": [
